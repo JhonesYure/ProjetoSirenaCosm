@@ -1,0 +1,34 @@
+@model List<Produtos>
+@using Microsoft.AspNetCore.Http;
+@using MySqlConnector;
+
+
+@{
+    ViewData["Title"] = "Compras";
+}
+
+<table class="table">
+    <thead>
+        <tr class="table">
+            <th>Id</th> <br>
+            <th>Valor Produto</th> <br>
+            <th>Quantidade</th> <br>
+            <th>Valor Total</th> <br>
+            <th>Operações</th> 
+        </tr>
+    </thead>
+    @foreach (Produtos p in Model)
+    {
+        <tr class="table">
+            <td>@p.IdProduto</td>
+            <td>@p.ValorProduto</td>
+            <td>@p.Quantidade</td>
+            <td>@p.ValorTotal</td>
+
+            <td>
+              
+               
+            </td>
+        </tr>
+    }
+</table>

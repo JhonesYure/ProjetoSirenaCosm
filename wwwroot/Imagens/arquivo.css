@@ -1,0 +1,92 @@
+.inicio
+{
+    text-align: center;
+    font-size:xx-large;
+    color: rgb(149, 16, 167);
+    font-style: italic;
+    
+    
+}
+.meio
+{
+    text-align: center;
+}
+.mais
+{
+    text-align: center;
+    font-size: 250%;
+    color: rgb(149, 16, 167);
+    font-style: italic;
+   
+}
+
+.p1
+{
+    text-align: center;
+    font-size: 250%;
+    color: rgb(149, 16, 167);
+    font-style: italic; 
+}
+.email
+{
+    
+    text-align: center;
+    font-size: 180%;
+    color: rgb(149, 16, 167);
+    font-style: italic; 
+}
+.p2
+{
+    text-align: center;
+    font-size: 180%;
+    color: rgb(149, 16, 167);
+    font-style: italic; 
+}
+.final
+{
+    background-color: white;
+}
+img.align-center
+{
+    display: block;
+   margin: 0px auto;
+}
+img.medium
+{
+    width: 250px;
+    height: 250px;
+}
+.form
+{
+    
+    
+}
+.Nome
+{
+    
+    font-size: 280%;
+    color: rgb(2, 2, 2);
+    font-style: italic; 
+}
+.Nome1
+{
+    text-align: center;
+    font-size: 180%;
+    border-radius: 10px;
+}
+.cad
+{
+    text-align: center;
+    font-size: 220%;
+    border-radius: 10px;  
+    
+    color: white;
+}
+.cad1
+{
+    text-align: center;
+    font-size: 220%;
+    border-radius: 10px;  
+    background-color: red;
+    color: white;
+}

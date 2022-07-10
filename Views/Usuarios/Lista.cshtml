@@ -1,0 +1,49 @@
+@model List<Usuarios>
+    @using Microsoft.AspNetCore.Http;
+    
+
+    @{
+        ViewData["Title"] = "Lista de Usuarios";
+    }
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Email</th>
+                <th>Data de Nascimento</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Sexo</th>
+                <th>Senha</th>
+                <th>Operações</th>
+            </tr>
+        </thead>
+        @foreach (Usuarios u in Model)
+        {
+            <tr>
+            <td>@u.Id</td>
+            <td>@u.Nome</td>
+            <td>@u.Sobrenome</td>
+            <td>@u.Email</td>
+            <td>@u.DataNascimento</td>
+            <td>@u.CPF</td>
+            <td>@u.Telefone</td>
+            <td>@u.Sexo</td>
+            <td>@u.Senha</td>
+
+            <td>
+                <a href="/Usuarios/Excluir?Id=@u.Id">Excluir</a>
+                <a href="/Usuarios/Alterar?Id=@u.Id">Alterar</a>
+            </td>
+            </tr>
+        }
+    </table>
+
+
+
+    <p>
+    Todos os direitos reservados Sirena Cosméticos.
+</p>

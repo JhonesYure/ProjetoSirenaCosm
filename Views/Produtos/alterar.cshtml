@@ -1,0 +1,34 @@
+@model Produtos
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "Alterar Pedido";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p class="text-danger">@ViewData["mensagem"]</p>
+
+<form method="post" asp-action = "Alterar">
+    <input value=@Context.Session.GetInt32("IdUsuario") type="hidden">
+
+    <p>
+        <label asp-for="ValorProduto">Valor Produto: </label>
+        <input asp-for="ValorProduto">
+    </p>
+    <p>
+        <label asp-for="Quantidade">Quantidade: </label>
+        <input asp-for="Quantidade">
+    </p>
+    <p>
+        <label asp-for="ValorTotal">Total Produto: </label>
+        <input asp-for="ValorTotal">
+    </p>
+
+    <p>
+        <input asp-for="IdProduto" type="hidden">
+        <input type="submit" value="Alterar Pedido">
+    </p>
+
+    
+</form>

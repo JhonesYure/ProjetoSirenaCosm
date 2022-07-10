@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ATV4PI</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+                <div class="container-fluid">
+                <div class="row">
+                   <div class="col-md">
+                      <a href="/Home/Index">
+                        <img class="rounded mx-auto d-block" src="~/Imagens/sirena_logo.png" title="Sirena Logo">
+                      </a>
+                    </div><!--col 12-->
+                   </div><!--ROW-->
+                 </div><!--FLUID-->
+
+                <div class="row">
+                <div class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-light border-bottom box-shadow col-md-11 faixa">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link text-dark txtinicio" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link text-dark txtinicio" asp-area="" asp-controller="Home" asp-action="Produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link text-dark txtinicio" asp-area="" asp-controller="Home" asp-action="somos">Quem somos</a>
+                        </li>
+                       
+
+                        <li class="nav-item col-md-2">
+                            <a class="nav-link text-dark txtinicio" asp-area="" asp-controller="Usuarios" asp-action="Inserir">Cadastrar</a>
+                        </li>
+                        @if (Context.Session.GetInt32("IdUsuario")==null)
+                        {
+                         <li class="nav-item dropdown col-md-2">
+                            <a class="nav-link text-dark txtinicio" asp-area="" asp-controller="Usuarios" asp-action="Login">Entrar</a>
+                        </li>
+                        }
+                        else{
+                        <li class="nav-item dropdown col-md-1">
+                            <a class="nav-link text-dark txtinicio" data-toggle="dropdown" href="#">Serviços</a>
+                        <div class="dropdown-menu">
+                        
+                            <a class="dropdown-item" asp-area="" asp-controller="Usuarios" asp-action="Lista">Lista de Usuarios</a>
+                                                        
+                            <a class="dropdown-item" asp-area="" asp-controller="Produtos" asp-action="Inserir">Inserir</a>
+                      
+                            <a class="dropdown-item" asp-area="" asp-controller="Produtos" asp-action="Pedidos">Pedidos</a>
+                        
+                        </div>
+                        </li>/*DROPDOWN*/
+                        <li class="nav-item col-md-1">
+                            <a class="nav-link text-dark txtinicio" asp-area="" asp-controller="Usuarios" asp-action="Logout">Sair</a>
+                        </li>
+                        }
+                        <li>
+                        <input class="caixa" type="search" placeholder="Buscar produtos">
+                        <img src="~/Imagens/lupa.png" type="submit" width="20px" height="20px">
+                        </li>
+                        
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

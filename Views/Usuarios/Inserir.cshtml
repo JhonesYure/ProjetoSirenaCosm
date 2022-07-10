@@ -1,0 +1,67 @@
+
+@model Usuarios
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<body>
+    <br>
+<h1 class="viewtitulo">@ViewData["Title"]</h1>
+
+<p class="text-danger viewtitulo">@ViewData["mensagem"]</p>
+<table class="table">
+<form method="post" asp-action="inserir" onsubmit="return validar_conta(this)">
+
+<p>    
+    <label asp-for = "Nome" class="txtlogin">Nome: </label>
+    <input asp-for = "Nome" class="box" placeholder="Seu Nome" required></p>
+<p>
+    <label asp-for = "Sobrenome" class="txtlogin">Sobrenome: </label>
+    <input asp-for = "Sobrenome" class="box" placeholder="Seu Sobrenome" required></p>
+<p>
+    <label asp-for = "Email" class="txtlogin">Email: </label>
+    <input asp-for = "Email" type="email" class="box" placeholder="Seu E-mail" required></p>
+<p>
+    <label asp-for = "DataNascimento" class="txtlogin">Data de Nascimento: </label>
+    <input asp-for = "DataNascimento" type="date" class="box"></p>
+<p>
+    <label asp-for = "CPF" class="txtlogin">CPF: </label>
+    <input asp-for = "CPF" maxlength="14" data-mask="000.000.000-00" class="box" placeholder="Digite seu CPF no formtato: xxx.xxx.xxx.-xx" required>
+    
+</p>    
+    
+<p>
+    <label asp-for = "Telefone" class="txtlogin">Telefone: </label>
+    <input asp-for = "Telefone" maxlength="15" data-mask="(00)0 0000-0000" class="box" placeholder="(00) 00000-0000" required></p>
+<p>
+    <label asp-for = "Sexo" class="txtlogin">Sexo: </label>
+    <select asp-for = "Sexo" class="box">
+
+        <option disabled selected>Selecione...</option>
+        <option >Masculino</option>
+        <option >Feminino</option>
+     
+    </select></p>
+<p>   
+
+    <label asp-for = "Senha" for="txtsenha" class="txtlogin">Senha: </label>
+    <input asp-for = "Senha" type="password" id="txtsenha" class="box">
+    <span class="msg-erro-senha msg-senha"></span>
+ </p>  
+ <br>
+ <p>          
+    <input type="submit" value="CADASTRAR" class="entrar">
+ </p>        
+</form>
+</table>
+
+<footer class="text-muted">
+            <div class="container txtcopy navbar-dark bg-light border-bottom box-shadow">
+              &copy; 2022 - Sirena Cométicos -
+            </div>
+</footer>
+
+
+</body>

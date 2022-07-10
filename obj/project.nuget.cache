@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "1jK1osFFrP+4yYW7m/i/NHQbhgheUg++uNzI9EYNLHVnEphPbkL+zaRbAe624ejguwYCEoqw1B2UTGyukdIFFw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jhones\\OneDrive\\SENAC\\ProjetoIntegrador\\ATV4PI\\ATV4PI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jhones\\.nuget\\packages\\mysqlconnector\\2.1.7\\mysqlconnector.2.1.7.nupkg.sha512",
+    "C:\\Users\\Jhones\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\Jhones\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
+  ],
+  "logs": []
+}

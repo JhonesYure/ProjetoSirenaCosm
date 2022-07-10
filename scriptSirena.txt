@@ -1,0 +1,27 @@
+CREATE DATABASE Sirena;
+
+CREATE TABLE Usuarios
+(
+    Id INT(11) NOT NULL AUTO_INCREMENT,
+    Nome VARCHAR(80),
+    Sobrenome VARCHAR(80),
+    Email VARCHAR(80),
+    DataNascimento DATETIME,
+    CPF VARCHAR (15),
+    Telefone VARCHAR(15),
+    Sexo VARCHAR(20),
+    Senha VARCHAR(30),
+    PRIMARY KEY(Id)
+    );
+
+
+CREATE TABLE Produtos
+(
+    IdProduto INT(11) NOT NULL AUTO_INCREMENT,
+    IdUsuario INT(11),
+    ValorProduto DOUBLE (9,2),
+    Quantidade INT(11),
+    ValorTotal DOUBLE(9,2),
+    PRIMARY KEY (IdProduto),
+    FOREIGN KEY (IdUsuario) REFERENCES usuarios(Id)
+    );
