@@ -84,3 +84,4 @@ C:\Users\Jhones\OneDrive\SENAC\ProjetoIntegrador\ATV4PI\obj\Debug\netcoreapp3.1\
 C:\Users\Jhones\OneDrive\SENAC\ProjetoIntegrador\ATV4PI\obj\Debug\netcoreapp3.1\ATV4PI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Jhones\OneDrive\SENAC\ProjetoIntegrador\ATV4PI\obj\Debug\netcoreapp3.1\Razor\Views\Home\somos.cshtml.g.cs
 C:\Users\Jhones\OneDrive\SENAC\ProjetoIntegrador\ATV4PI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Produtos.cshtml.g.cs
+C:\Users\Jhones\OneDrive\SENAC\ProjetoIntegrador\ATV4PI\obj\Debug\netcoreapp3.1\Razor\Views\Home\Parceiros.cshtml.g.cs

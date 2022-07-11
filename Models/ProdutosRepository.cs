@@ -5,7 +5,7 @@ namespace ATV4PI.Models
 {
     public class ProdutosRepository
     {
-          private const string DadosConexao =  "Database=Sirena;Data Source=localhost;User Id=root";
+          private const string DadosConexao =  "Server=MYSQL8002.site4now.net;Database=db_a8911b_sirena;Uid=a8911b_sirena;Pwd=dift1234";
 
           public int Usuario {get;set;}
        
